@@ -1,0 +1,65 @@
+import os
+import json
+from groq import Groq
+
+# Set your Groq API key here directly or via environment variable
+GROQ_API_KEY = os.getenv("GROQ_API_KEY") or "your-groq-api-key-here"
+
+client = Groq(api_key=GROQ_API_KEY)
+
+def generate_structured_output(user_input):
+    system_prompt = """
+You are a helpful assistant that takes a stream-of-consciousness journal entry and organizes it into structured JSON under six categories:
+- Health & Well-being
+- Family & Relationships
+- Work Stress
+- Community & Meaningful Work
+- Emotional State
+- Habits & Patterns
+
+Output must follow this exact JSON structure:
+[
+  {
+    "category": "Health & Well-being",
+    "entries": [
+      {
+        "entry": 1,
+        "title": "Short Title",
+        "thoughts": [
+          "Thought 1.",
+          "Thought 2."
+        ]
+      }
+    ]
+  }
+]
+
+Only include categories relevant to the input. Be concise and clear. Output only valid JSON and nothing else.
+"""
+
+    messages = [
+        {"role": "system", "content": system_prompt},
+        {"role": "user", "content": user_input}
+    ]
+
+    response = client.chat.completions.create(
+        model="llama3-70b-8192",
+        messages=messages,
+        temperature=0.3,
+        max_tokens=2048
+    )
+
+    return response.choices[0].message.content
+
+if __name__ == "__main__":
+    user_input = input("Enter your stream-of-consciousness journal entry:\n\n")
+    print("\nProcessing your input...\n")
+    try:
+        structured_output = generate_structured_output(user_input)
+        parsed_output = json.loads(structured_output)
+        print(json.dumps(parsed_output, indent=2))
+    except json.JSONDecodeError:
+        print("The model response could not be parsed as JSON. Here's the raw output:\n")
+        print(structured_output)
+    except Exception as e:
+        print("Error while processing:", e)
