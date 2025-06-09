@@ -25,10 +25,7 @@ Input:
 I barely slept last night. My back hurts again. I miss talking to my sister. I'm dreading the Zoom call tomorrow.
 ```
 Output:
-
-json
-Copy
-Edit
+```python
 [
   {
     "category": "Health & Well-being",
