@@ -68,7 +68,7 @@ Edit
     ]
   }
 ]
-## Getting Started
+## setting up the environment 
 1. Clone the Repository
 ```bash
 git clone https://github.com/vishal320/Structured_json.git
