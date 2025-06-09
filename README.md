@@ -70,21 +70,21 @@ Edit
 ]
 ## setting up the environment 
 1. Clone the Repository
-```bash
+```python
 git clone https://github.com/vishal320/Structured_json.git
 cd Structured_json
 ```
 2. Install Dependencies
-```bash
+```python
 pip install groq python-dotenv
 ```
 3. Set Your API Key
 Create a .env file in the root directory and add:
-```bash
+```python
 GROQ_API_KEY=your_actual_groq_api_key_here
 ```
 4. Run the Program
-```bash
+```python
 python main.py
 ```
 Enter your journal-style text when prompted.
