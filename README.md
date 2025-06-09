@@ -1,4 +1,4 @@
- ## structred JSON output
+ # structred output for the stream of thoughts
 This project uses Groq's LLaMA3-70B model to transform unstructured stream-of-thoughts journal entries into structured .
 
 ## What It Does
