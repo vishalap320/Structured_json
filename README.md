@@ -18,6 +18,7 @@ Habits & Patterns
 
 Each category includes entries with titles and lists of summarized thoughts. Only relevant categories are included in the output.
 
+
 ## Example
 Input:
 
@@ -66,6 +67,16 @@ Output:
   }
 ]
 ```
+
+## How It Works
+Sets up a Groq LLaMA3-70B chat model.
+
+Sends a system prompt instructing the LLM to return structured, categorized JSON.
+
+Parses and prints the JSON output for clear readability.
+
+Handles JSON formatting issues gracefully.
+
 ## setting up the environment 
 1. Clone the Repository
 ```python
@@ -87,14 +98,6 @@ python main.py
 ```
 Enter your journal-style text when prompted.
 
-## How It Works
-Sets up a Groq LLaMA3-70B chat model.
-
-Sends a system prompt instructing the LLM to return structured, categorized JSON.
-
-Parses and prints the JSON output for clear readability.
-
-Handles JSON formatting issues gracefully.
 
 ## Notes
 Make sure your Groq API key is active and has sufficient quota.
