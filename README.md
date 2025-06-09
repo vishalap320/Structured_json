@@ -77,6 +77,21 @@ Parses and prints the JSON output for clear readability.
 
 Handles JSON formatting issues gracefully.
 
+Install Python
+Make sure Python 3.8+ is installed. Check by running:
+
+```bash
+python --version
+```
+Set Up a Virtual Environment (Optional but Recommended)
+Create and activate a virtual environment:
+
+Windows:
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+```
+
 ## setting up the environment 
 1. Clone the Repository
 ```python
@@ -97,7 +112,12 @@ GROQ_API_KEY=your_actual_groq_api_key_here
 python main.py
 ```
 Enter your journal-style text when prompted.
-
+## Expected error
+ Error code: 400 - {'error': {'message': "Failed to generate JSON. Please adjust your prompt
+Why does this happen?
+The instructions to the model might be unclear
+## How to fix or avoid it?
+Simplify and clarify your prompt
 
 ## Notes
 Make sure your Groq API key is active and has sufficient quota.
