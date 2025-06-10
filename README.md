@@ -1,5 +1,6 @@
  # structred output for the stream of thoughts
 This project uses Groq's LLaMA3-70B model to transform unstructured stream-of-thoughts journal entries into structured .
+ It is designed to help people make sense of their unfiltered thoughts by organizing them into structured categories.
 
 ## What It Does
 Given a raw, free-form journal input, this script classifies and organizes the content under the following categories:
@@ -121,6 +122,8 @@ Simplify and clarify your prompt
 
 ## Notes
 Make sure your Groq API key is active and has sufficient quota.
+Requires Python, Groq library, and API key.
+Categories: Health, Family, Work Stress, Community, Emotions, Habits.
 
 The output strictly follows the requested JSON structure—ideal for downstream automation.
 
