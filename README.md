@@ -84,6 +84,8 @@ Make sure Python 3.8+ is installed. Check by running:
 ```bash
 python --version
 ```
+If not installed, download it from: https://www.python.org/downloads/
+
 Set Up a Virtual Environment (Optional but Recommended)
 Create and activate a virtual environment:
 
