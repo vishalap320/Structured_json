@@ -86,10 +86,13 @@ python --version
 ```
 If not installed, download it from: https://www.python.org/downloads/
 
+Install required package:
+```python
+pip install groq
+```
 Set Up a Virtual Environment (Optional but Recommended)
 Create and activate a virtual environment:
 
-Windows:
 ```bash
 python -m venv .venv
 .venv\Scripts\activate
